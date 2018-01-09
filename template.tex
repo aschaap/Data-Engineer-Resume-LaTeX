@@ -17,11 +17,18 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+
 %----------------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
 \documentclass[letterpaper]{twentysecondcv} % a4paper for A4
+
+\usepackage[backend=biber, style=authortitle, sorting=ydnt, maxnames=9, dashed=false, useprefix=false]{biblatex}
+\DeclareNameAlias{sortname}{given-family} %ensure all authors' names appear in same order; biblatex switches first author by default
+\addbibresource{publications.bib}
+\nocite{*} %display all entries in bib file
 
 % Command for printing skill overview bubbles
 \newcommand\skills{ 
@@ -120,6 +127,9 @@
 
 \section{Publications}
  \vspace{2mm}
+ \printbibliography[heading=none,type=article]
+ 
+
 
 %----------------------------------------------------------------------------------------
 %	 EXPERIENCE

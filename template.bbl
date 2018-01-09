@@ -1,0 +1,52 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{ydnt/global/}
+    \entry{zou_asymptotically_????}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=09a830805066105e89f7bc31a50cf3fb}{%
+           family={Zou},
+           familyi={Z\bibinitperiod},
+           given={Aili\bibnamedelima (Alice)},
+           giveni={A\bibinitperiod\bibinitdelim (\bibinitperiod}}}%
+        {{uniquename=0,hash=f6fd919701392623daf453f7d58307c7}{%
+           family={Down},
+           familyi={D\bibinitperiod},
+           given={Douglas},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{4092401aa76021648a027f81f576a347}
+      \strng{fullhash}{4092401aa76021648a027f81f576a347}
+      \strng{authornamehash}{4092401aa76021648a027f81f576a347}
+      \strng{authorfullhash}{4092401aa76021648a027f81f576a347}
+      \field{sortinit}{2}
+      \field{sortinithash}{0aa614ace9f3a40ef5a67e7f7a184048}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Asia-Pacific Journal of Operational Research}
+      \field{pubstate}{Submitted}
+      \field{title}{Asymptotically maximal throughput in tandem systems with flexible and dedicated servers}
+      \field{year}{2018}
+      \field{dateera}{ce}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+
