@@ -247,7 +247,7 @@
     %------------------------------------------------
     \vspace{4mm}
     \profilesection{Skills}{4cm}
-    
+    \vspace{1em}
 %    {\large \textbf{Overview}}
 
 	\skills
