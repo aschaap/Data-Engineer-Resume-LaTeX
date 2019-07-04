@@ -1,6 +1,6 @@
 # LaTeX resume template
 
-This is the template I use for my own resume. I've compiled it with elements from several templates, including:
+This is the template I use for my own resume. I've forked it from [Harsh Gadgil's Data Engineer Resume](https://github.com/opensorceror/Data-Engineer-Resume-LaTeX), who in turn compiled it with elements from several templates, including:
 
 1. [Carmine Spagnuolo's Twenty Seconds Curriculum Vitae](https://github.com/spagnuolocarmine/TwentySecondsCurriculumVitae-LaTex)
 2. [Carmine Benedetto's Smart Fancy LaTeX CV](https://github.com/neoben/smart-fancy-latex-cv)
@@ -10,9 +10,9 @@ This is the template I use for my own resume. I've compiled it with elements fro
 
 ## Installing pre-requisites (Windows)
 
-1. Install [MiKTeX](https://miktex.org/howto/install-miktex), a TeX distribution for Windows that includes a large number of major packages.
+1. Install a TeX distribution that includes a large number of major packages such as [TeXLive](https://www.tug.org/texlive/) or [MiKTeX](https://miktex.org/howto/install-miktex).
 
-2. Install an editor to edit and compile LaTeX documents. I recommend [TeXstudio](http://www.texstudio.org/) or [Texmaker](http://www.xm1math.net/texmaker/).
+2. Install an editor to edit and compile LaTeX documents. I recommend [TeXstudio](https://www.texstudio.org/) or [Emacs](https://www.gnu.org/software/emacs/) (for which [Spacemacs](http://spacemacs.org/) is a good starting point).
 
 Once both the distribution and editor are installed, clone this repository using `git clone` and open the template.tex file in your editor. **Important**: Make sure to compile with XeLaTeX, not PDFLaTeX. You're good to go!
 
