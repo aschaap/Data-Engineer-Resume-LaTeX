@@ -1,0 +1,92 @@
+% !TeX program = xelatex
+\documentclass[
+fontsize=12pt,
+paper=letter,
+parskip=half,
+enlargefirstpage=on,    % More space on first page
+fromalign=right,        % PLacement of name in letter head
+fromphone=on,           % Turn on phone number of sender
+fromemail=on,
+fromrule=aftername,     % Rule after sender name in letter head
+addrfield=off,           % Adress field for envelope with window
+backaddress=off,         % Sender address in this window
+subject=beforeopening,  % Placement of subject
+locfield=narrow,        % Additional field for sender
+foldmarks=off,           % Print foldmarks
+]{scrlttr2}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[canadian]{babel}
+\usepackage{fontspec} % Allows font customization
+\usepackage{marvosym} % Allows the use of symbol
+\usepackage{csquotes}
+
+\defaultfontfeatures{Mapping=tex-text}
+
+\renewcommand{\normalsize}{\fontsize{12}{16}\selectfont}
+\let\raggedsignature\raggedright
+
+\makeatletter
+\@setplength{sigbeforevskip}{\parskip}
+\@setplength{refvpos}{\useplength{toaddrvpos}}
+\makeatother
+
+%\LoadLetterOption{DIN}
+\setkomavar{fromname}{Alexander Schaap}
+\setkomavar{fromaddress}{608-1830 Main Street West\\Hamilton, ON\\L8S 1H5}
+\setkomavar{fromphone}{+1 289 775 9192}
+\setkomavar{fromemail}{alexander.l.schaap@gmail.com}
+\setkomavar{backaddressseparator}{\enspace\textperiodcentered\enspace}
+\setkomavar{signature}{Alexander Schaap}
+\setkomavar{place}{Hamilton}
+\setkomavar{date}{\today}
+%\setkomavar{enclseparator}{: }
+
+\setkomavar{firsthead} {
+  \centering
+  {\addfontfeature{LetterSpace=20.0}\fontsize{24}{24}\selectfont\scshape \usekomavar{fromname}}\\[1mm]
+  \fontsize{12}{12}\selectfont\scshape Technical Solutions Engineer } 
+\setkomavar{firstfoot}{
+  \centering
+  \addfontfeature{LetterSpace=50.0}\scshape
+  {
+    \renewcommand{\\}{\ {\large\textperiodcentered}\ }
+    \usekomavar{fromaddress}
+  }\\
+  {\quad \Large\Letter} \usekomavar{fromemail} \ {\Large\Telefon} \usekomavar{fromphone}}
+\begin{document}
+% If you want headings on subsequent pages,
+% remove the ``%'' on the next line:
+% \pagestyle{headings}
+
+\begin{letter}{Hiring Manager\\Google}
+
+\setkomavar{subject}{}
+
+\opening{Dear~Hiring~Manager,}
+
+In response to your Technical Solutions Engineer job posting on McMaster University's OSCARplus, I have attached my resume for your review.
+My experience in various roles as a liaison between available technology and people in need of solutions allows me to efficiently address customers needs and ensure their satisfaction.
+Proven industry experience as a researcher/consultant has made me an effective communicator, and I genuinely enjoy helping people solve problems.
+
+Having successfully performed troubleshooting on computers since elementary school, I bring the desired aptitude and mindset to the table.
+In grad school, I solved other graduate students' Windows, Linux and network connectivity problems, ranging from a Thunderbolt display flooding the building's wired network with packets to troubleshooting malfunctioning PC hardware.
+In my Research Assistant position during this time, I researched solutions to issues raised by our industry partner, learning new systems and standards for every project.
+I effectively communicated my findings via quarterly reports, presentations to upper management and weekly meetings with domain experts.
+For my home server, I use a top-level domain via dynamic DNS to access my self-hosted services.
+
+Google has distinguished itself as a company that values intellect and creative solutions, in addition to listening to employees regarding project Maven for example.
+The opposition to censorship and respect for privacy by withholding project Dragonfly are admirable and align with my personal values.
+I also believe that Alphabet's extensive range of products and services via its many subsidiaries is an intelligent approach to ever-changing markets that keeps customers engaged.
+
+I am confident that my expertise and passion will prove to be an asset to the organization.
+Thank you for your time and consideration.
+I look forward to hearing from you and further discussing my qualifications.
+\closing{Sincerely,}
+
+%enclosure listing
+%\encl{}
+
+\end{letter}
+\end{document}
