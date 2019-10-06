@@ -1,0 +1,95 @@
+% !TeX program = xelatex
+\documentclass[
+fontsize=12pt,
+paper=letter,
+parskip=half,
+enlargefirstpage=on,    % More space on first page
+fromalign=right,        % PLacement of name in letter head
+fromphone=on,           % Turn on phone number of sender
+fromemail=on,
+fromrule=aftername,     % Rule after sender name in letter head
+addrfield=off,           % Adress field for envelope with window
+backaddress=off,         % Sender address in this window
+subject=beforeopening,  % Placement of subject
+locfield=narrow,        % Additional field for sender
+foldmarks=off,           % Print foldmarks
+]{scrlttr2}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[canadian]{babel}
+\usepackage{fontspec} % Allows font customization
+\usepackage{marvosym} % Allows the use of symbol
+\usepackage{csquotes}
+
+\defaultfontfeatures{Mapping=tex-text}
+
+\renewcommand{\normalsize}{\fontsize{11.5}{15}\selectfont}
+\let\raggedsignature\raggedright
+
+\makeatletter
+\@setplength{sigbeforevskip}{\parskip}
+\@setplength{refvpos}{\useplength{toaddrvpos}}
+\makeatother
+
+%\LoadLetterOption{DIN}
+\setkomavar{fromname}{Alexander Schaap}
+\setkomavar{fromaddress}{608-1830 Main Street West\\Hamilton, ON\\L8S 1H5}
+\setkomavar{fromphone}{+1 289 775 9192}
+\setkomavar{fromemail}{alexander.l.schaap@gmail.com}
+\setkomavar{backaddressseparator}{\enspace\textperiodcentered\enspace}
+\setkomavar{signature}{Alexander Schaap}
+\setkomavar{place}{Hamilton}
+\setkomavar{date}{\today}
+%\setkomavar{enclseparator}{: }
+
+\setkomavar{firsthead} {
+  \centering
+  {\addfontfeature{LetterSpace=20.0}\fontsize{24}{24}\selectfont\scshape \usekomavar{fromname}}\\[1mm]
+  \fontsize{12}{12}\selectfont\scshape Cloud Technical Residency } 
+\setkomavar{firstfoot}{
+  \centering
+  \addfontfeature{LetterSpace=50.0}\scshape
+  {
+    \renewcommand{\\}{\ {\large\textperiodcentered}\ }
+    \usekomavar{fromaddress}
+  }\\
+  {\quad \Large\Letter} \usekomavar{fromemail} \ {\Large\Telefon} \usekomavar{fromphone}}
+\begin{document}
+% If you want headings on subsequent pages,
+% remove the ``%'' on the next line:
+% \pagestyle{headings}
+
+\begin{letter}{Hiring Manager\\Google}
+
+\setkomavar{subject}{}
+
+\opening{Dear~Hiring~Manager,}
+
+In response to your Cloud Technical Residency job posting on McMaster University's OSCARplus, I have attached my resume for your review.
+My education and personal interests align with the desired qualifications.
+Proven industry experience as a collaborating researcher has made me an effective communicator, and I genuinely enjoy helping people solve problems.
+
+It is my belief that I possess the right blend of software engineering and communicative skills for the position.
+Throughout my undergraduate program I predominantly used Java, but learned Haskell via an elective.
+I had multiple courses on database design and SQL query construction, and did well enough to subsequently be a teaching assistant for one such course.
+While I have used Scala in my graduate-level programming languages class, my functional programming experience centres around Haskell and OCaml, mainly focusing on the latter for the last five years.
+As an open source enthusiast, I have used Linux daily ever since I started in high school, starting with Ubuntu before moving on to Debian, Arch and Gentoo.
+While I have considered the counterpart to the cloud as well by hosting some services at home, I'm looking for opportunities to learn more about the cloud.
+I have been using my critical thinking and problem-solving skills for troubleshooting computers successfully and cost-effectively since elementary school.
+In graduate school, I solved other graduate students' Windows, Linux and network connectivity problems, and due to my versatile knowledge I quickly became the go-to person for such questions.
+
+Google has distinguished itself as a company that values intellect and creative solutions, in addition to listening to employees regarding project Maven and project Dragonfly for example.
+Maintaining organizational flexibility and working on products and services that can make peoples' lives better appeals to me.
+I also believe that Alphabet's extensive range of products and services via its many subsidiaries is an intelligent approach to ever-changing markets, and one that keeps customers engaged.
+
+I am confident that my expertise and passion will prove to be an asset to the organization.
+Thank you for your time and consideration.
+I look forward to hearing from you and further discussing my qualifications.
+\closing{Sincerely,}
+
+%enclosure listing
+%\encl{}
+
+\end{letter}
+\end{document}
