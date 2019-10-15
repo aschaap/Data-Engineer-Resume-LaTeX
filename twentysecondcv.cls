@@ -184,7 +184,7 @@
       minimum height=\paperheight+1cm] (box) at (-4.8cm,0.5cm){};
   \end{tikzpicture}
   %------------------------------------------------
-  \begin{textblock}{5.5}(0.3, 0.2)
+  \begin{textblock}{5.3}(0.3, 0.2)
     %------------------------------------------------
     
         \vspace{4mm}
