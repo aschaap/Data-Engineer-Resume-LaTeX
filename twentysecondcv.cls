@@ -156,13 +156,13 @@
 \newcommand*\icon[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=1pt, fill=mainblue,mainblue,text=white] (char) {#1};}}
 
 % Command for printing skill progress bars
-\newcommand\programming[1]{ 
+\newcommand\programming[1]{
 	\renewcommand{\programming}{
 		\begin{tikzpicture}
-        	\node [above right] at (0, 4) {$Knowledge \: of \: \arrow{1.9} \: Skilled \: in$};
+        	\node [above right] at (0, 4) {$Knowledge \: of \: \arrow{1.7} \: Skilled \: in$};
 			\foreach [count=\i] \x/\y in {#1}{
-				\draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
-				\draw[fill=white,mainblue](0,\i) rectangle (\y,\i+0.4);
+				\draw[fill=maingray,maingray] (0.05,\i) rectangle (5.8,\i+0.4);
+				\draw[fill=white,mainblue](0.05,\i) rectangle (\y*.967,\i+0.4);
 				\node [above right] at (0,\i+0.35) {\x};
 			}
 		\end{tikzpicture}
@@ -181,13 +181,10 @@
 \newcommand{\makeprofile}{
   \begin{tikzpicture}[remember picture,overlay]
     \node [rectangle, fill=sidecolor, anchor=north, minimum width=9cm,
-      minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
+      minimum height=\paperheight+1cm] (box) at (-4.8cm,0.5cm){};
   \end{tikzpicture}
-
   %------------------------------------------------
-
-  \begin{textblock}{6}(0.5, 0.2)
-
+  \begin{textblock}{5.5}(0.3, 0.2)
     %------------------------------------------------
     
         \vspace{4mm}
@@ -203,11 +200,11 @@
     
     \vspace{4mm}
     \renewcommand{\arraystretch}{2}
-    \begin{tabular}{p{1cm} @{\hskip 0.2cm}p{5cm}}
+    \begin{tabular}{p{0.8cm} @{\hskip 0.2cm}p{5cm}}
       \ifthenelse{\equal{\cvnumberphone}{}}{}{
       		{$
               \begin{array}{l}
-              \hspace{2mm} \Huge \textnormal{\faMobile}
+              \hspace{1.5mm} \Huge \textnormal{\faMobile}
               \end{array}
               $} 
             & \cvnumberphone\\}
@@ -215,14 +212,14 @@
       \ifthenelse{\equal{\cvsite}{}}{}{
             {$
               \begin{array}{l}
-              \hspace{0.8mm} \huge \textnormal{\textcolor{test}{\faGlobe}}
+              \hspace{0.0mm} \huge \textnormal{\textcolor{test}{\faGlobe}}
               \end{array}
               $} 
             & \href{http://\cvsite}{\cvsite} \\}
       \ifthenelse{\equal{\cvmail}{}}{}{
             {$
               \begin{array}{l}
-              \hspace{0.5mm} \huge \textnormal{\textcolor{yt}{\faEnvelopeO}}
+              \hspace{-0.3mm} \huge \textnormal{\textcolor{yt}{\faEnvelopeO}}
               \end{array}
               $} 
             & \href{mailto:\cvmail}{\cvmail} \\}
@@ -230,45 +227,37 @@
        \ifthenelse{\equal{\cvlinkedin}{}}{}{
             {$
               \begin{array}{l}
-              \hspace{1mm} \huge \textnormal{\textcolor{linkedin}{\faLinkedin}}
+              \hspace{0.2mm} \huge \textnormal{\textcolor{linkedin}{\faLinkedin}}
               \end{array}
               $} & \href{https://www.linkedin.com\cvlinkedin}{\cvlinkedin} \\
             }  
         \ifthenelse{\equal{\cvgithub}{}}{}{
             {$
               \begin{array}{l}
-              \hspace{1mm} \huge \textnormal{\faGithub}
+              \hspace{0.2mm} \huge \textnormal{\faGithub}
               \end{array}
               $} & \href{https://www.github.com/\cvgithub}{\cvgithub} \\
             }   
             
     \end{tabular}
 
-    %------------------------------------------------
-    \vspace{4mm}
+%------------------------------------------------
     \profilesection{Skills}{4cm}
-    \vspace{1em}
-%    {\large \textbf{Overview}}
+    \vspace{0em}
 
-	\skills
-        
-        %------------------------------------------------
-        
- %       \vspace{3mm}
-       
-	 {\large \textbf{Programming}} 
+    \skills
+%------------------------------------------------
 
-		 \programming
-         
-           \vspace{4mm}
-        \profilesection{Projects}{3cm} 
-        
-        \projects
-      
+    {\large \textbf{Programming}}
+
+    \programming
+
+    \profilesection{Projects}{3cm}
+
+    \projects
+
   \end{textblock}
 }
-
-
 %----------------------------------------------------------------------------------------
 %	 COLOURED SECTION TITLE BOX
 %----------------------------------------------------------------------------------------
@@ -361,7 +350,7 @@
 %	 MARGINS AND LINKS
 %----------------------------------------------------------------------------------------
 
-\RequirePackage[left=7.6cm,top=0.1cm,right=1cm,bottom=0.1cm,nohead,nofoot]{geometry}
+\RequirePackage[left=6.8cm,top=0.1cm,right=0.8cm,bottom=0.1cm,nohead,nofoot]{geometry}
 
 
 \usepackage{smartdiagram}
