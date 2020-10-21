@@ -1,0 +1,91 @@
+% !TeX program = xelatex
+\documentclass[
+fontsize=12pt,
+paper=letter,
+parskip=half,
+enlargefirstpage=on,    % More space on first page
+fromalign=right,        % PLacement of name in letter head
+fromphone=on,           % Turn on phone number of sender
+fromemail=on,
+fromrule=aftername,     % Rule after sender name in letter head
+addrfield=off,           % Adress field for envelope with window
+backaddress=off,         % Sender address in this window
+subject=beforeopening,  % Placement of subject
+locfield=narrow,        % Additional field for sender
+foldmarks=off,           % Print foldmarks
+]{scrlttr2}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[canadian]{babel}
+\usepackage{fontspec} % Allows font customization
+\usepackage{marvosym} % Allows the use of symbol
+\usepackage{csquotes}
+
+\defaultfontfeatures{Mapping=tex-text}
+
+\renewcommand{\normalsize}{\fontsize{11.5}{15}\selectfont}
+\let\raggedsignature\raggedright
+
+\makeatletter
+\@setplength{sigbeforevskip}{\parskip}
+\@setplength{refvpos}{\useplength{toaddrvpos}}
+\makeatother
+
+%\LoadLetterOption{DIN}
+\setkomavar{fromname}{Alexander Schaap}
+\setkomavar{fromaddress}{608-1830 Main Street West\\Hamilton, ON\\L8S 1H5}
+\setkomavar{fromphone}{+1 289 775 9192}
+\setkomavar{fromemail}{alexander.l.schaap@gmail.com}
+\setkomavar{backaddressseparator}{\enspace\textperiodcentered\enspace}
+\setkomavar{signature}{Alexander Schaap}
+\setkomavar{place}{Hamilton}
+\setkomavar{date}{\today}
+%\setkomavar{enclseparator}{: }
+
+\setkomavar{firsthead} {
+  \centering
+  {\addfontfeature{LetterSpace=20.0}\fontsize{24}{24}\selectfont\scshape \usekomavar{fromname}}\\[1mm]
+  \fontsize{12}{12}\selectfont\scshape Software Engineer and Sustainability Enthusiast} 
+\setkomavar{firstfoot}{
+  \centering
+  \addfontfeature{LetterSpace=50.0}\scshape
+  {
+    \renewcommand{\\}{\ {\large\textperiodcentered}\ }
+    \usekomavar{fromaddress}
+  }\\
+  {\quad \Large\Letter} \usekomavar{fromemail} \ {\Large\Telefon} \usekomavar{fromphone}}
+\begin{document}
+% If you want headings on subsequent pages,
+% remove the ``%'' on the next line:
+% \pagestyle{headings}
+
+\begin{letter}{Academic Sustainability Programs Office}
+
+\setkomavar{subject}{Course Developer - Sustain 2IS3 - Intersectionality \& Sustainable Development}
+
+\opening{Dear~Hiring~Manager,}
+
+I am passionate about sustainability.
+For 6+ years, I have collected e-waste and produced working PCs for friends and family.
+I voluntarily collaborated on the Fall 2019 3S03 ``From Trash to Treasure'' course project with great satisfaction, which I hope to replicate during my current collaboration on the Repair Caf\'{e} course project.
+I enjoy these opportunities to use my knowledge and experience to make a positive, measurable difference in our handling of the environment in terms of waste reduction.
+In my brief role at UTS, I attempted to push for an e-waste reuse program, but due to the COVID-19 pandemic, this effort was put on hold.
+Nevertheless, I believe this experience would aid in the development of new courses.
+My PhD at McMaster (all but degree) demonstrates I am also a strong independent worker who can focus on a single topic for extended periods of time.
+Proven industry experience has made me an effective communicator.
+As an open source enthusiast, I try to give back to the community however I may.
+
+My experience with the Academic Sustainability Programs Office have been nothing but positive, and I would be honoured to work alongside professional and driven colleagues in such a meaningful position.
+I am delighted at the opportunity to give back to McMaster and the broader community for the betterment of the world as a whole.
+
+I am confident that my expertise and passion will prove to be an asset to the Academic Sustainability Programs Office.
+Thank you for your time and consideration.
+I look forward to hearing from you and further discussing my qualifications.
+\closing{Sincerely,}
+
+%enclosure listing
+%\encl{}
+
+\end{letter}
+\end{document}
