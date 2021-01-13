@@ -1,0 +1,91 @@
+% !TeX program = xelatex
+\documentclass[
+fontsize=12pt,
+paper=letter,
+parskip=half,
+enlargefirstpage=on,    % More space on first page
+fromalign=right,        % PLacement of name in letter head
+fromphone=on,           % Turn on phone number of sender
+fromemail=on,
+fromrule=aftername,     % Rule after sender name in letter head
+addrfield=off,           % Adress field for envelope with window
+backaddress=off,         % Sender address in this window
+subject=beforeopening,  % Placement of subject
+locfield=narrow,        % Additional field for sender
+foldmarks=off,           % Print foldmarks
+]{scrlttr2}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[canadian]{babel}
+\usepackage{fontspec} % Allows font customization
+\usepackage{marvosym} % Allows the use of symbol
+\usepackage{csquotes}
+
+\defaultfontfeatures{Mapping=tex-text}
+
+\renewcommand{\normalsize}{\fontsize{11.5}{15}\selectfont}
+\let\raggedsignature\raggedright
+
+\makeatletter
+\@setplength{sigbeforevskip}{\parskip}
+\@setplength{refvpos}{\useplength{toaddrvpos}}
+\makeatother
+
+%\LoadLetterOption{DIN}
+\setkomavar{fromname}{Alexander L. Schaap}
+\setkomavar{fromaddress}{608-1830 Main Street West\\Hamilton, ON\\L8S 1H5}
+\setkomavar{fromphone}{+1 289 775 9192}
+\setkomavar{fromemail}{alexander.l.schaap@gmail.com}
+\setkomavar{backaddressseparator}{\enspace\textperiodcentered\enspace}
+\setkomavar{signature}{Alexander Schaap}
+\setkomavar{place}{Hamilton}
+\setkomavar{date}{\today}
+%\setkomavar{enclseparator}{: }
+
+\setkomavar{firsthead} {
+  \centering
+  {\addfontfeature{LetterSpace=20.0}\fontsize{24}{24}\selectfont\scshape \usekomavar{fromname}}\\[1mm]
+  \fontsize{12}{12}\selectfont\scshape Software Engineer and Sustainability Enthusiast} 
+\setkomavar{firstfoot}{
+  \centering
+  \addfontfeature{LetterSpace=50.0}\scshape
+  {
+    \renewcommand{\\}{\ {\large\textperiodcentered}\ }
+    \usekomavar{fromaddress}
+  }\\
+  {\quad \Large\Letter} \usekomavar{fromemail} \ {\Large\Telefon} \usekomavar{fromphone}}
+\begin{document}
+% If you want headings on subsequent pages,
+% remove the ``%'' on the next line:
+% \pagestyle{headings}
+
+\begin{letter}{Academic Sustainability Programs Office}
+
+\setkomavar{subject}{Software Engineer -- Irmin}
+
+\opening{Dear~Hiring~Manager,}
+
+I am passionate about storage systems.
+From reading Scott Chacon's ``Pro Git'' book explaining how Git can be seen as a filesystem, to the Zettabyte File System (ZFS), on which I wrote a course report, taking a teaching assistant position for a databases course, taking the first steps to using MongoDB in my spare time, and researching the most efficient (yet accessible) compression scheme for comic book archives, I feel my interest would be an asset.
+
+My PhD at McMaster demonstrates I am also a strong independent worker who can focus on a single topic for extended periods of time.
+Proven industry experience has made me an effective communicator.
+While I do not have any publications about my research beyond my master's thesis yet, I believe that the experience developing program generators in OCaml would be beneficial as a software engineer on the Irmin project.
+I am also a proponent of open-source; I try to give back to the community however I may.
+I use Gentoo Linux daily on my desktop, and Debian on my home server. While I spend most of my time on my degree, my Github activity will show you my efforts to contribute to open-source projects.
+
+Tarides has been of interest to me for some time now.
+Apart from being one of the few OCaml-centric companies, the unikernel approach also seems worthwhile, especially from a security point of view.
+Since you employ many top minds from well-known universities, I also expect it to be an inspiring environment to work in.
+
+I am confident that my expertise and passion will prove to be an asset to Tarides and the Irmin project.
+Thank you for your time and consideration.
+I look forward to hearing from you and further discussing my qualifications.
+\closing{Sincerely,}
+
+%enclosure listing
+%\encl{}
+
+\end{letter}
+\end{document}
