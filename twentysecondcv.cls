@@ -158,14 +158,15 @@
 % Command for printing skill progress bars
 \newcommand\programming[1]{ 
 	\renewcommand{\programming}{
-		\begin{tikzpicture}
-        	\node [above right] at (0, 4) {$Knowledge \: of \: \arrow{1.9} \: Skilled \: in$};
+		\begin{itemize}[label={}]
+%        	\node [above right] at (0, 4) {$Knowledge \: of \: \arrow{1.9} \: Skilled \: in$};
 			\foreach [count=\i] \x/\y in {#1}{
-				\draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
-				\draw[fill=white,mainblue](0,\i) rectangle (\y,\i+0.4);
-				\node [above right] at (0,\i+0.35) {\x};
+%				\draw[fill=maingray,maingray] (0,\i) rectangle (6.2,\i+0.4);
+%				\draw[fill=white,mainblue](0,\i) rectangle (\y,\i+0.4);
+%				\node [above right] at (0,\i+0.35) {\x};
+        \item \x
 			}
-		\end{tikzpicture}
+		\end{itemize}
 	}
 }
 \newcommand\projects[1]{ 
@@ -186,7 +187,7 @@
 
   %------------------------------------------------
 
-  \begin{textblock}{6}(0.5, 0.2)
+  \begin{textblock}{5.6}(0.4, 0.2)
 
     %------------------------------------------------
     
@@ -201,7 +202,7 @@
 
     %------------------------------------------------
     
-    \vspace{4mm}
+%    \vspace{4mm}
     \renewcommand{\arraystretch}{2}
     \begin{tabular}{p{1cm} @{\hskip 0.2cm}p{5cm}}
       \ifthenelse{\equal{\cvnumberphone}{}}{}{
@@ -239,14 +240,14 @@
               \begin{array}{l}
               \hspace{1mm} \huge \textnormal{\faGithub}
               \end{array}
-              $} & \href{https://www.github.com/\cvgithub}{\cvgithub} \\
+              $} & \href{https://www.github.com/\cvgithub}{\cvgithub} %\\
             }   
             
     \end{tabular}
 
     %------------------------------------------------
-    \vspace{4mm}
-    \profilesection{Skills}{4cm}
+%    \vspace{4mm}
+    \profilesection{Skills}{4.4cm}
     \vspace{1em}
 %    {\large \textbf{Overview}}
 
@@ -260,8 +261,8 @@
 
 		 \programming
          
-           \vspace{4mm}
-        \profilesection{Projects}{3cm} 
+%           \vspace{4mm}
+        \profilesection{Projects}{3.4cm} 
         
         \projects
       
