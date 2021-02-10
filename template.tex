@@ -36,20 +36,24 @@
 }
 
 % Command for printing skill overview bubbles
-\newcommand\skills{ 
-~
+\newcommand\skills{
+  \vspace{-1.5em}
+  \smartdiagramset{
+    bubble center node size = 3.5cm,
+  }
 	\smartdiagram[bubble diagram]{
         \textbf{Software}\\\textbf{Engineering},
-        \textbf{~~Data Structures~~}\\\textbf{Algorithms},
-        \textbf{Architecture/}\\\textbf{Modularization},
-        \textbf{~Information~}\\\textbf{Hiding},
-         \textbf{~~~~~Full Stack~~~~~}\\\textbf{Web Dev \&}\\\textbf{Shell Scripts},
-         \textbf{~~~Gitlab CI~~~}\\\textbf{Github}
+        \textbf{Effective}\\\textbf{~~Communication~~},
+        \textbf{Architecture/}\\\textbf{~Modularization~},
+        \textbf{Linux}\\\textbf{~Administration~},
+        \textbf{Debugging/}\\\textbf{Troubleshooting},
+        \textbf{~~~~~~~~Critical~~~~~~~~}\\\textbf{Thinking}
     }
+  \vspace{-.5em}
 }
 
 % Programming skill bars
-\programming{{OCaml $\textbullet$ Linux $\textbullet$ \LaTeX / 5.8}, {Java $\textbullet$ Lua $\textbullet$ Git / 5.5}, {Haskell $\textbullet$ C \& C++ $\textbullet$ JS / 5}}
+\programming{{OCaml $\textbullet$ Java $\textbullet$ \LaTeX / 5.8}, {Bash $\textbullet$ Lua $\textbullet$ Git / 5.5}, {Haskell $\textbullet$ C \& C++ $\textbullet$ JS / 5}}
 
 % Projects text
 \projects{
