@@ -1,0 +1,94 @@
+% !TeX program = xelatex
+\documentclass[
+fontsize=12pt,
+paper=letter,
+parskip=half,
+enlargefirstpage=on,    % More space on first page
+fromalign=right,        % PLacement of name in letter head
+fromphone=on,           % Turn on phone number of sender
+fromemail=on,
+fromrule=aftername,     % Rule after sender name in letter head
+addrfield=off,           % Adress field for envelope with window
+backaddress=off,         % Sender address in this window
+subject=beforeopening,  % Placement of subject
+locfield=narrow,        % Additional field for sender
+foldmarks=off,           % Print foldmarks
+]{scrlttr2}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[canadian]{babel}
+\usepackage{fontspec} % Allows font customization
+\usepackage{marvosym} % Allows the use of symbol
+\usepackage{csquotes}
+
+\defaultfontfeatures{Mapping=tex-text}
+
+\renewcommand{\normalsize}{\fontsize{11.5}{15}\selectfont}
+\let\raggedsignature\raggedright
+
+\makeatletter
+\@setplength{sigbeforevskip}{\parskip}
+\@setplength{refvpos}{\useplength{toaddrvpos}}
+\makeatother
+
+%\LoadLetterOption{DIN}
+\setkomavar{fromname}{Alexander L. Schaap}
+\setkomavar{fromaddress}{608-1830 Main Street West\\Hamilton, ON\\L8S 1H5}
+\setkomavar{fromphone}{+1 289 775 9192}
+\setkomavar{fromemail}{alexander.l.schaap@gmail.com}
+\setkomavar{backaddressseparator}{\enspace\textperiodcentered\enspace}
+\setkomavar{signature}{Alexander Schaap}
+\setkomavar{place}{Hamilton}
+\setkomavar{date}{\today}
+%\setkomavar{enclseparator}{: }
+
+\setkomavar{firsthead} {
+  \centering
+  {\addfontfeature{LetterSpace=20.0}\fontsize{24}{24}\selectfont\scshape \usekomavar{fromname}}\\[1mm]
+  \fontsize{12}{12}\selectfont\scshape Software Engineer and Sustainability Enthusiast} 
+\setkomavar{firstfoot}{
+  \centering
+  \addfontfeature{LetterSpace=50.0}\scshape
+  {
+    \renewcommand{\\}{\ {\large\textperiodcentered}\ }
+    \usekomavar{fromaddress}
+  }\\
+  {\quad \Large\Letter} \usekomavar{fromemail} \ {\Large\Telefon} \usekomavar{fromphone}}
+\begin{document}
+% If you want headings on subsequent pages,
+% remove the ``%'' on the next line:
+% \pagestyle{headings}
+
+\begin{letter}{}
+
+\setkomavar{subject}{Software Engineer -- Irmin}
+
+\opening{Dear~Hiring~Manager,}
+
+I believe my technical aptitude and broad range of skills to be a valuable addition to RBC Ventures.
+I am a creative problem-solver, and enjoy helping people.
+Sensitive to the needs of others and detail-oriented, I am an attentive listener, which heps m me to provide well-thought-out solutions.
+
+In high school and undergrad, I customized and ran Joomla-based websites, gaining experience creating W3C and AODA compliant user experiences in HTML, CSS and Javscript.
+I resolved cross-browser compatibility and layout issues (dating back to IE 6), and optimized loading time.
+I used MySQL databases in conjunction with Joomla, and taught an undergrad relational databases course; I also took grad-level algorithms and data structures course.
+My graduate research focuses on abstraction through architecting and refining APIs, and using them; I relied on unit testing throughout.
+My foray into DevOps includes writing a continuous integration pipeline in Gitlab to configure a Docker image, compile code, and run unit tests.
+As a Research Assistant, I gained seven years of research and software development experience in a collaborative automotive setting.
+My GitHub activity demonstrates my proficiency in Git and my contributions to open-source projects via pull requests.
+
+My experience with RBC, starting as a child of a client, has always been excellent.
+Additionally, I believe RBC's strategy of branching out into successful ventures will pay off.
+I would like to help effect meaningful change to people's lives through my passion for building software.
+
+I am confident that my expertise and passion will prove to be an asset to RBC Ventures and Movesnap.
+Thank you for your time and consideration.
+I look forward to hearing from you and further discussing my qualifications.
+\closing{Sincerely,}
+
+%enclosure listing
+%\encl{}
+
+\end{letter}
+\end{document}
